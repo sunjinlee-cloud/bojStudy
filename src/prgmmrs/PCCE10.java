@@ -37,6 +37,7 @@ public class PCCE10 {
             } else if (i+dw[k]< park.length && j+dh[k]<park[i].length && park[i+dw[k]][j+dh[k]].equals("-1")) {
                 check[i][j] = 1;
 
+
             }
         }
     }

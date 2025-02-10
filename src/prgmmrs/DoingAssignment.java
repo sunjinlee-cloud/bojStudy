@@ -8,7 +8,7 @@ import java.util.*;
 
 public class DoingAssignment {
     public static void main(String[] args) {
-        String [][] plans = {{"a", "00:10", "30"}, {"b", "00:15", "25"}, {"c", "00:35", "5"}, {"d", "00:55", "15"}, {"e", "01:20", "10"}, {"f", "03:10", "20"}};
+        String [][] plans = {{"UmmLang", "11:00", "10"}, {"MSA", "11:08", "1"}, {"Redis", "11:10", "1"}, {"Kafka", "11:12", "1"}};
 
 
         for(int i = 0; i< plans.length; i++) {
@@ -49,14 +49,14 @@ public class DoingAssignment {
                     else if (temp >= map.get(stack.peek())) { //스택에 과제가 있고, 남는시간(temp)이 미룬과제 처리시간보다 긴경우
                         while(!stack.empty() && temp>=map.get(stack.peek())) {
                             temp -= map.get(stack.peek());
-                            ans.add(stack.pop());
+                                ans.add(stack.pop());
                         }
                     } else { //스택에 미룬과제가 있고, 남는시간(temp)이 미룬과제 처리시간보다 부족한 경우
                         int a = map.get(stack.peek()) - temp;
                         map.put(stack.peek(), a);
                     }
                 }
-            }
+            } 
 
         }
 
